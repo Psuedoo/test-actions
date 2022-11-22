@@ -1,7 +1,7 @@
 rules:
   - slack-notif:
       conditions:
-        - environment="Production"
+        - environment='Production'
       actions:
         - slack_channel_message:
             channel: "#psu-test-channel"
