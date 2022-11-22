@@ -7,3 +7,4 @@ rules:
             channel: "#psu-test-channel"
             message: |
               This is a test
+        - add_deploy_tag: "lolol"
