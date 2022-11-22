@@ -6,4 +6,4 @@ rules:
         - slack_channel_message:
             channel: "#psu-test-channel"
             message: |
-              {{revision}}
+              This is a test
