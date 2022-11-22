@@ -5,4 +5,5 @@ rules:
       actions:
         - slack_channel_message:
             channel: "#psu-test-channel"
-            message: "{{revision}}"
+            message: |
+              {{revision}}
