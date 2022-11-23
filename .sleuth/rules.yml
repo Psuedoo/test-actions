@@ -5,5 +5,5 @@ rules:
       actions:
         - slack_channel_message:
             channel: "#psu-test-channel"
-            message: This is a test
+            message: { { revision } }
         - add_deploy_tag: "lolol"
