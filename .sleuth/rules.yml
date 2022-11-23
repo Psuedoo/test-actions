@@ -7,3 +7,6 @@ rules:
             channel: "#psu-test-channel"
             message: "{{ revision }}"
         - add_deploy_tag: "lolol"
+        - trigger_build:
+            parameters:
+              version: "{{ revision }}"
