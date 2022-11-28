@@ -21,7 +21,8 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: echo "Hello, World! lol here's a revision: <<pipeline.parameters.revision>>"
+          command: |
+            echo "Hello, World! lol here's a revision: <<pipeline.parameters.revision>>"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
