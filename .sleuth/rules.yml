@@ -9,4 +9,4 @@ rules:
         - add_deploy_tag: "{{ revision }}"
         - trigger_build:
             parameters:
-              version: "ASDF"
+              version: "{{ revision }}"
