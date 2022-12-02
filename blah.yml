@@ -1,0 +1,16 @@
+rules:
+  - my-custom-approval-rule:
+      conditions:
+        - environment='preprod'
+      actions:
+        - slack_channel_approval:
+            name: "prod-promote-and-deploy"
+            prompt: "{{ authors_slack }}, would you like to approve to {{ deploy_slack }} prod?"
+            channel: "#sleuth-dispatch-testing"
+            votes_required: 1
+            on_success:
+              - trigger_build:
+                  parameters:
+                    promote_and_deploy_tag: true
+                    environment: preprod
+                    version: "{{ revision }}"
