@@ -5,7 +5,7 @@ rules:
       actions:
         - slack_channel_message:
             channel: "#psu-test-channel"
-            message: "{{ revision }}"
+            message: {{ revision }}
         - add_deploy_tag: "{{ revision }}"
         - trigger_build:
             parameters:
