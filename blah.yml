@@ -11,6 +11,7 @@ rules:
             on_success:
               - trigger_build:
                   parameters:
+                    name: 'blank.yml'
                     promote_and_deploy_tag: true
                     environment: preprod
                     version: "{{ revision }}"
