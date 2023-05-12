@@ -9,4 +9,5 @@ rules:
         - add_deploy_tag: "{{ revision }}"
         - trigger_build:
             parameters:
+              name: 'blank.yml'
               version: "{{ revision }}"
