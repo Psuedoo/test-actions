@@ -7,7 +7,12 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'lol'
+        type: string
+      promote_and_deploy_tag:
+        type: string
+      version:
+        type: string
+
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
