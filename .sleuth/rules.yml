@@ -1,5 +1,5 @@
 rules:
-  - slack-notif:
+  - my-friggin-rule:
       conditions:
         - environment='Production'
       actions:
