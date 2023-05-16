@@ -3,15 +3,9 @@ rules:
       conditions:
         - environment='Production'
       actions:
-        - slack_channel_approval:
-            name: "prod-promote-and-deploy"
-            prompt: "{{ authors_slack }}, would you like to approve to {{ deploy_slack }} prod?"
-            channel: "#psu-test-channel"
-            votes_required: 1
-            on_success:
-              - trigger_build:
-                  parameters:
-                    name: 'blank.yml'
-                    promote_and_deploy_tag: true
-                    environment: Production
-                    version: "{{ revision }}"
+        - trigger_build:
+            parameters:
+              name: 'blank.yml'
+              promote_and_deploy_tag: true
+              environment: Production
+              version: "{{ revision }}"
