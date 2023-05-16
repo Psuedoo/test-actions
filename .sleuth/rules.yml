@@ -6,6 +6,3 @@ rules:
         - trigger_build:
             parameters:
               name: 'blah.yml'
-              promote_and_deploy_tag: true
-              environment: Production
-              version: "{{ revision }}"
