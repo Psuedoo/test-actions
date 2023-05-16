@@ -5,7 +5,7 @@ rules:
       actions:
         - trigger_build:
             parameters:
-              name: 'blank.yml'
+              name: 'blah.yml'
               promote_and_deploy_tag: true
               environment: Production
               version: "{{ revision }}"
