@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  trigger-another-pipeline:
+    docker:
+      - image: circleci/python:3.9
+
+    steps:
+      - run:
+          name: Trigger Another Pipeline
+          command: |
+            curl -X POST -H "Content-Type: application/json" -d '{
+              "branch": "main",
+              "parameters": {
+                "param1": "value1",
+                "param2": "value2"
+              }
+            }' -u "${CIRCLE_TOKEN}:" "https://circleci.com/api/v2/project/github/Psuedoo/test-actions/pipeline"
