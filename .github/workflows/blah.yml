@@ -5,13 +5,6 @@ name: Execute from action
 on:
 
   workflow_dispatch:
-    inputs:
-      environment:
-        type: string
-      promote_and_deploy_tag:
-        type: boolean
-      version:
-        type: string
 
 
 
